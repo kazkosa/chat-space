@@ -18,3 +18,11 @@
 ### Association
 - has_many :comments
 - has_many :groups, through: :groups_users
+
+## groupsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false|
+### Association
+- has_many :comments
+- has_many :users, through: :groups_users
