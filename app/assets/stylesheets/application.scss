@@ -1,0 +1,237 @@
+@import "./reset";
+@import "./variable";
+@import "font-awesome";
+
+
+*{
+  box-sizing: border-box;
+}
+
+ .header{
+  color:#ffffff;
+  background:$right-blue;
+  text-align:center;
+  width:100%;
+  display:none;
+}
+
+.wrapper{
+  height:100%;
+  width:100%;
+  display:flex;
+  flex-flow:row;
+
+  .left-contents{
+    width:300px;
+    flex:0 0 300px;
+    color:white;
+    
+    &__nav{
+      background:$nav-bg-color;
+      padding:0 20px 0 20px;
+
+      &__box{
+        display:flex;
+        justify-content:space-between;
+        height:100px;
+        line-height:100px;
+
+        &__username{
+          font-weight:bold;
+          font-size:16px;
+        }
+
+        &__menu{
+          display:flex;
+        }
+      }
+
+      &__box__menu__newgroup__btn{
+        text-decoration: none;
+
+        &__icon{
+          color:white;
+          margin-left:0.4em;
+        }
+      }
+    }
+    &__groups{
+      background:$groups-bg-color;
+      padding:20px 20px 0 20px;
+      height: calc(100vh - 100px);
+      margin:0;
+
+      &__list{
+
+        &__group{
+          margin:0 0 40px 0;
+  
+          &__block{
+            color:white;
+            text-decoration: none;
+
+            &__name{
+              font-size:15px;
+              margin-bottom:5px;
+            }
+
+            &__text{
+              font-size:11px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .right-contents{
+    background:$main-bg-color;
+    flex:1 1 auto;
+
+    &__header{
+      padding:0px 40px;
+      height:100px;
+      border-bottom:1px solid $border-color;
+
+      &__box{
+        display:flex;
+        justify-content:space-between;
+  
+        &__group{
+          padding:35px 0 0 0;
+  
+          &__name{
+            font-size:20px;
+            color:$group-color;
+            padding-bottom:15px;
+          }
+
+          &__members{
+            display:flex;
+
+            &__member{
+
+              &__name{
+                font-size:12px;
+                color:$group-member-color;
+                margin-right:0.5em;
+              }
+            }
+          }
+        }
+  
+        &__edit{
+          padding-top:28px;
+
+          &__btn{
+            text-decoration:none;
+            color:$right-blue;
+            display:inline-block;
+            height: 40px;
+            line-height: 40px;
+            padding: 0 20px;
+            margin: 0;
+            border: solid 1px $right-blue;
+          }
+        }
+      }
+    }
+
+    &__messages{
+      padding:46px 40px 46px 40px;
+      background:$main-bg-color;
+      height:calc(100vh - 190px);
+      overflow:scroll;
+      
+      &__list{
+        display:block;
+
+        &__message{
+          padding-bottom:40px;
+          display:block;
+
+          &__usertime{
+            display:flex;
+
+            &_user{
+              padding-right:10px;
+              font-size:16px;
+              font-weight:bold;
+              color:$username-color;
+              display:block;
+            }
+            &_time{
+              font-size:12px;
+              font-weight:normal;
+              color:$timestamp-color;
+              display:block;
+            }
+          }
+          &__text{
+            font-size:14px;
+            color:$usertext-color;
+            padding-top:10px;
+            display:block;
+          }
+        }
+      }
+    }
+    .form{
+      margin:0;
+      padding:20px 40px 20px 40px;
+      display:block;
+      bottom:20px;
+      width:calc(100vh-300px);
+      background:$form-bg-color;
+
+      .new__message{
+        display:flex;
+        
+        &__input__text{
+          background:$main-bg-color;
+          border:none;
+          height:50px;
+          line-height:50px;
+          width:100%;
+          padding:0 40px 0 10px;
+          font-size:16px;
+          display:block;
+        }
+
+        &__input__image{
+          display:inline-block;
+          height:50px;
+          padding-right:10px;
+          line-height:50px;
+          font-size:21px;
+          background:$main-bg-color;
+        
+          &__icon{
+            background:$main-bg-color;
+            display:inline-block;
+          }
+          &__icon:hover{
+            cursor:pointer;
+          }
+
+          &__file{
+            display:inline-block;
+            display:none;
+            margin:0;
+            padding:0;
+          }
+        }
+        &__submit-btn{
+          width:100px;
+          margin:0 0 0 15px;
+          padding:0 30px;
+          height:50px;
+          display:block;
+          line-height:50px; 
+          background:$right-blue;
+          color:$main-bg-color;
+        }
+      }
+    }
+  }
+}
