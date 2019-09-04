@@ -1,0 +1,120 @@
+.header
+  %p グループを作成しました
+.wrapper
+  .left-contents
+    .left-contents__nav
+      .left-contents__nav__box
+        .left-contents__nav__box__username
+          %p my_name
+        %ul.left-contents__nav__box__menu
+          %li.left-contents__nav__box__menu__newgroup
+            =link_to "" ,class:"left-contents__nav__box__menu__newgroup__btn" do
+              =fa_icon "edit" ,class: "left-contents__nav__box__menu__newgroup__btn__icon" 
+          %li.left-contents__nav__box__menu__edit-user
+            =link_to "" ,class:"left-contents__nav__box__menu__newgroup__btn" do
+              =fa_icon "cog" ,class:"left-contents__nav__box__menu__newgroup__btn__icon"
+    .left-contents__groups
+      %div.left-contents__groups__list
+        %div.left-contents__groups__list__group<>
+          =link_to "",class:"left-contents__groups__list__group__block" do
+            %p.left-contents__groups__list__group__block__name<>
+              test_group1
+            %p.left-contents__groups__list__group__block__text<>
+              text1
+        %div.left-contents__groups__list__group<>
+          =link_to "",class:"left-contents__groups__list__group__block" do
+            %p.left-contents__groups__list__group__block__name<>
+              test_group2 
+            %p.left-contents__groups__list__group__block__text<>
+              text2
+  .right-contents
+    .right-contents__header
+      .right-contents__header__box
+        .right-contents__header__box__group
+          %p.right-contents__header__box__group__name
+            test_group1
+          %ul.right-contents__header__box__group__members
+            %li.right-contents__header__box__group__members__member<>
+              %p.right-contents__header__box__group__members__member__name Member :
+            %li.right-contents__header__box__group__members__member<>
+              %p.right-contents__header__box__group__members__member__name my_name
+            %li.right-contents__header__box__group__members__member<>
+              %p.right-contents__header__box__group__members__member__name user1
+            %li.right-contents__header__box__group__members__member<>
+              %p.right-contents__header__box__group__members__member__name user2
+        .right-contents__header__box__edit
+          =link_to "",class:"right-contents__header__box__edit__btn" do
+            Edit
+
+    .right-contents__messages
+      %ul.right-contents__messages__list
+        %li.right-contents__messages__list__message<>
+          .right-contents__messages__list__message__usertime
+            %p.right-contents__messages__list__message__usertime_user<>
+              user1
+            %p.right-contents__messages__list__message__usertime_time<>
+              2019/08/31(Sat) 18:01:16
+          %p.right-contents__messages__list__message__text<>
+            message1
+        %li.right-contents__messages__list__message<>
+          .right-contents__messages__list__message__usertime
+            %p.right-contents__messages__list__message__usertime_user<>
+              user2
+            %p.right-contents__messages__list__message__usertime_time<>
+              2019/08/31(Sat) 18:10:18
+          %p.right-contents__messages__list__message__text<>
+            message2
+        %li.right-contents__messages__list__message<>
+          .right-contents__messages__list__message__usertime
+            %p.right-contents__messages__list__message__usertime_user<>
+              user2
+            %p.right-contents__messages__list__message__usertime_time<>
+              2019/08/31(Sat) 18:11:00
+          %p.right-contents__messages__list__message__text<>
+            message3
+        %li.right-contents__messages__list__message<>
+          .right-contents__messages__list__message__usertime
+            %p.right-contents__messages__list__message__usertime_user<>
+              user2
+            %p.right-contents__messages__list__message__usertime_time<>
+              2019/08/31(Sat) 18:10:18
+          %p.right-contents__messages__list__message__text<>
+            message2
+        %li.right-contents__messages__list__message<>
+          .right-contents__messages__list__message__usertime
+            %p.right-contents__messages__list__message__usertime_user<>
+              user2
+            %p.right-contents__messages__list__message__usertime_time<>
+              2019/08/31(Sat) 18:10:18
+          %p.right-contents__messages__list__message__text<>
+            message2
+        %li.right-contents__messages__list__message<>
+          .right-contents__messages__list__message__usertime
+            %p.right-contents__messages__list__message__usertime_user<>
+              user2
+            %p.right-contents__messages__list__message__usertime_time<>
+              2019/08/31(Sat) 18:11:00
+          %p.right-contents__messages__list__message__text<>
+            message3
+        %li.right-contents__messages__list__message<>
+          .right-contents__messages__list__message__usertime
+            %p.right-contents__messages__list__message__usertime_user<>
+              user2
+            %p.right-contents__messages__list__message__usertime_time<>
+              2019/08/31(Sat) 18:10:18
+          %p.right-contents__messages__list__message__text<>
+            message2
+
+
+
+
+
+    .form
+      = form_tag "", {:method => :post , :class => "new__message"} do
+        %input{:class => "new__message__input__text", :name => "text", :placeholder => "type a message", :type => "post"}
+        %label{:class => "new__message__input__image"}
+          =fa_icon "image" ,class:"new__message__input__image__icon"
+          %input{:type => "file", :class => "new__message__input__image__file"}
+        %input{:type => "submit", :value => "Send", :class => "new__message__submit-btn"}
+  
+
