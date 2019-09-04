@@ -110,11 +110,11 @@
 
 
     .form
-      = form_tag "", {:method => :post , :class => "new__message"} do
-        %input{:class => "new__message__input__text", :name => "text", :placeholder => "type a message", :type => "post"}
-        %label{:class => "new__message__input__image"}
-          =fa_icon "image" ,class:"new__message__input__image__icon"
-          %input{:type => "file", :class => "new__message__input__image__file"}
-        %input{:type => "submit", :value => "Send", :class => "new__message__submit-btn"}
+      = form_tag "", {method: :post , class: "new__message"} do
+        %input{class: "new__message__input__text", name: "text", placeholder: "type a message", type: "post"}
+        %label{class: "new__message__input__image"}
+          =fa_icon "image" ,class: "new__message__input__image__icon"
+          %input{type: "file", class: "new__message__input__image__file"}
+        %input{type: "submit", value: "Send", class: "new__message__submit-btn"}
   
 
