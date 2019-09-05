@@ -1,6 +1,9 @@
-@import "./reset";
 @import "./variable";
 @import "font-awesome";
+@import "config/reset";
+@import "config/colors.scss";
+@import "modules/flash";
+@import "modules/user";
 
 
 *{
@@ -43,15 +46,16 @@
 
         &__menu{
           display:flex;
-        }
-      }
-
-      &__box__menu__newgroup__btn{
-        text-decoration: none;
-
-        &__icon{
-          color:white;
-          margin-left:0.4em;
+          &__newgroup{
+            &__btn{
+              text-decoration: none;
+    
+              &__icon{
+                color:white;
+                margin-left:0.4em;
+              }
+            }
+          }
         }
       }
     }

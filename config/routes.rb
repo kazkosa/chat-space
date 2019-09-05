@@ -1,3 +1,5 @@
 Rails.application.routes.draw do
-  root  'messages#index' #仮置きのルーティング
+  devise_for :users
+  root 'messages#index'
+  resources :users, only: [:edit, :update]
 end
