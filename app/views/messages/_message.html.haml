@@ -1,0 +1,11 @@
+.message
+  %li.right-contents__messages__list__message<>
+    .right-contents__messages__list__message__usertime
+      %p.right-contents__messages__list__message__usertime_user<>
+        = message.user.name
+      %p.right-contents__messages__list__message__usertime_time<>
+        = message.created_at.strftime("%Y/%m/%d %H:%M")
+    - if message.content.present?
+      %p.right-contents__messages__list__message__text<>
+        = message.content
+    = image_tag message.image.url, class: 'lower-message__image' if message.image.present?

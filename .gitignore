@@ -6,12 +6,18 @@
 
 # Ignore bundler config.
 /.bundle
+/config/application.yml
 
 # Ignore all logfiles and tempfiles.
 /log/*
 /tmp/*
 !/log/.keep
 !/tmp/.keep
+/public/*
+
+# Ignore uploaded test images.
+/public/uploads
+
 
 # Ignore Byebug command history file.
 .byebug_history

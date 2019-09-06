@@ -178,6 +178,10 @@
             padding-top:10px;
             display:block;
           }
+          .lower-message__image{
+            max-height:300px;
+            width:auto;
+          }
         }
       }
     }
@@ -191,6 +195,7 @@
 
       .new__message{
         display:flex;
+        position:relative;
         
         &__input__text{
           background:$main-bg-color;
@@ -205,11 +210,14 @@
 
         &__input__image{
           display:inline-block;
-          height:50px;
+          height:30px;
           padding-right:10px;
-          line-height:50px;
+          line-height:30px;
           font-size:21px;
           background:$main-bg-color;
+          position:absolute;
+          top:10px;
+          right:120px;
         
           &__icon{
             background:$main-bg-color;
