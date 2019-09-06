@@ -4,13 +4,14 @@
 @import "config/colors.scss";
 @import "modules/flash";
 @import "modules/user";
+@import "modules/group.scss";
 
 
 *{
   box-sizing: border-box;
 }
 
- .header{
+.header{
   color:#ffffff;
   background:$right-blue;
   text-align:center;
