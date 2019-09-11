@@ -1,7 +1,7 @@
 $(function(){
   
   function appendMsgToHTML(message){
-    var html_image = `<img src=${message.image_url} class="lower-message__image"></img>`;
+    var html_image = message.image_url ? `<img src=${message.image_url} class="lower-message__image"></img>` : ``;
     var html = `
       <div class="message">
         <li class="right-contents__messages__list__message">
@@ -16,12 +16,11 @@ $(function(){
           <p class="right-contents__messages__list__message__text">
             ${message.content}
           </p>
-      `
-      +   (message.image_url? html_image:``) //画像投稿有無に応じてimgタグ(html_image)追加
-      + `
+          ${html_image}
         </li>
       </div>
       `;
+
     $(".right-contents__messages__list").append(html);
   }
   //Send btnによる発火処理
