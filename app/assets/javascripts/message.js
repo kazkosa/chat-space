@@ -1,10 +1,8 @@
 $(function(){
   
   function appendMsgToHTML(message){
-    var html;
-    if(message.image_url){
-      //画像投稿ありのケース
-      html = `
+    var html_image = `<img src=${message.image_url} class="lower-message__image"></img>`;
+    var html = `
       <div class="message">
         <li class="right-contents__messages__list__message">
           <div class="right-contents__messages__list__message__usertime">
@@ -18,31 +16,12 @@ $(function(){
           <p class="right-contents__messages__list__message__text">
             ${message.content}
           </p>
-          <img src=${message.image_url} class="lower-message__image"></img>
+      `
+      +   (message.image_url? html_image:``) //画像投稿有無に応じてimgタグ(html_image)追加
+      + `
         </li>
       </div>
       `;
-    }else{
-      //画像投稿なしかつテキスト投稿ありのケース
-      html = `
-      <div class="message">
-        <li class="right-contents__messages__list__message">
-          <div class="right-contents__messages__list__message__usertime">
-            <p class="right-contents__messages__list__message__usertime_user">
-              ${message.user_name}
-            </p>
-            <p class="right-contents__messages__list__message__usertime_time">
-              ${message.created_at}
-            </p>
-          </div>
-          <p class="right-contents__messages__list__message__text">
-            ${message.content}
-          </p>
-
-        </li>
-      </div>
-      `;
-    }
     $(".right-contents__messages__list").append(html);
   }
   //Send btnによる発火処理
