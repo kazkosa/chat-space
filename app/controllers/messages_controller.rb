@@ -7,13 +7,11 @@ class MessagesController < ApplicationController
   def create
     @message = Message.new(message_params)
     if @message.save
-      @timestamp=@message.created_at.strftime("%Y/%m/%d %H:%M")
       respond_to do |format|
         format.html {redirect_to group_messages_path(@group), notice: 'メッセージが送信されました'}
         format.json
       end
     else
-      @timestamp=nil
       respond_to do |format|
         format.html {flash.now[:alert] = 'メッセージを入力してください。'; render :index}
         format.json
