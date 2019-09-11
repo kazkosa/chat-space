@@ -48,9 +48,7 @@ $(function(){
         var position = target.offset().top + $(".right-contents__messages").scrollTop();
         $(".right-contents__messages").animate({scrollTop: position}, 300, 'swing');
         
-
-        $("#message_content").val("");
-        $("input[type='file']").val("");
+        $("#new_message")[0].reset();
         $(".new__message__submit-btn").removeAttr("disabled");
 
       }else{
