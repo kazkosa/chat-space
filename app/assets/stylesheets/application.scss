@@ -225,6 +225,7 @@
           }
           &__icon:hover{
             cursor:pointer; 
+            opacity:0.5;
           }
 
           &__file{
@@ -243,6 +244,10 @@
           line-height:50px; 
           background:$right-blue;
           color:$main-bg-color;
+        }
+        &__submit-btn:hover{
+          opacity:0.5;
+          cursor:pointer;
         }
       }
     }
