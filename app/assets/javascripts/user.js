@@ -26,7 +26,7 @@ $(function(){
   //グループメンバー候補に追加
   function buildHTML_AddMember(user_id, user_name){
     var html = `
-      <div class="chat-group-user clearfix js-chat-member" id="chat-group-user-${user_id}">
+      <div class="chat-group-user clearfix js-chat-member" data-user_id="chat-group-user-${user_id}">
         <input name="group[user_ids][]" type="hidden" value=${user_id}>
         <p class="chat-group-user__name">${user_name}</p>
         <a class="user-search-remove chat-group-user__btn chat-group-user__btn--remove js-remove-btn" data-user_id="${user_id}", data-user_name="${user_name}">削除</a>

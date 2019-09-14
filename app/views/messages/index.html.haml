@@ -22,7 +22,6 @@
         = render partial: 'message', collection: @messages
 
     .form
-      -# = form_tag "", {method: :post , class: "new__message"} do
       = form_for [@group,@message] , html: {class: "new__message"} do |f|
         = f.text_field :content, class: "new__message__input__text", placeholder: "type a message"
         .form__mask
