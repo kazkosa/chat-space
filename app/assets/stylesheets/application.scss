@@ -67,10 +67,12 @@
       margin:0;
 
       &__list{
+        height:100%;
+        overflow:scroll;
 
         &__group{
           margin:0 0 40px 0;
-  
+          
           &__block{
             color:white;
             text-decoration: none;

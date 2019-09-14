@@ -14,8 +14,8 @@
                 %p.right-contents__header__box__group__members__member__name
                   =user.name
         .right-contents__header__box__edit
-          =link_to "",class:"right-contents__header__box__edit__btn" do
-            Edit
+          =link_to "Edit", edit_group_path(@group), class:"right-contents__header__box__edit__btn"
+            
 
     .right-contents__messages
       %ul.right-contents__messages__list
