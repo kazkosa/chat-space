@@ -12,14 +12,14 @@
       = f.text_field :name, class: 'chat__group_name chat-group-form__input', placeholder: 'グループ名を入力してください'
   .chat-group-form__field.clearfix
     .chat-group-form__field--left
-      %label.chat-group-form__label{:for => "chat_group_チャットメンバー"} チャットメンバーを追加
+      = f.label :"チャットメンバーを追加",class:"chat-group-form__label"
     .chat-group-form__field--right
       / この部分はインクリメンタルサーチ（ユーザー追加の非同期化のときに使用します
       %input{type: "text", name: "keyword", id:"user-search-field",  placeholder:"追加したいユーザー名を入力してください", class: "chat-group-form__input"}
       .search_result
   .chat-group-form__field.clearfix
     .chat-group-form__field--left
-      %label.chat-group-form__label{:for => "chat_group_チャットメンバー"} チャットメンバー
+      = f.label :"チャットメンバー", class: "chat-group-form__label"
     .chat-group-form__field--right
       .chat-group-form__field__member
         .chat-group-users.js-add-user
